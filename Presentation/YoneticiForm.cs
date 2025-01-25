@@ -317,7 +317,7 @@ namespace OtelRezervasyon.Presentation
                     FormBorderStyle = FormBorderStyle.FixedDialog,
                     StartPosition = FormStartPosition.CenterParent,
                     Padding = new Padding(10),
-                    Font = new SystemFont(SystemFonts.DefaultFont.FontFamily, 10f)  // Yeni oda formunun fontunu da büyüt
+                    Font = new SystemFont(SystemFonts.DefaultFont.FontFamily, 10f)
                 };
 
                 // Temel kontroller
@@ -441,6 +441,23 @@ namespace OtelRezervasyon.Presentation
                     Height = 30
                 };
 
+                // İptal butonu ekle
+                var btnIptal = new Button
+                {
+                    Text = "İptal",
+                    Left = 230,  // Kaydet butonunun yanına
+                    Top = 350,
+                    Width = 100,
+                    Height = 30,
+                    DialogResult = DialogResult.Cancel  // Önemli!
+                };
+
+                // Form'a CancelButton'ı set et
+                form.CancelButton = btnIptal;  // ESC tuşu için
+                
+                // İptal butonunu form'a ekle
+                form.Controls.Add(btnIptal);
+
                 btnKaydet.Click += (se, ev) => {
                     try
                     {
@@ -462,7 +479,7 @@ namespace OtelRezervasyon.Presentation
                         var mevcutOdalar = _odaDAL.GetAllOdalar();
                         foreach (DataRow mevcutRow in mevcutOdalar.Rows)
                         {
-                            if (Convert.ToInt32(mevcutRow["Oda No"]) == yeniOdaNo)
+                            if (Convert.ToInt32(mevcutRow["OdaNumarasi"]) == yeniOdaNo)
                             {
                                 MessageBox.Show($"{yeniOdaNo} numaralı oda zaten mevcut! Başka bir numara seçin.");
                                 return;
