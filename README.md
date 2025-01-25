@@ -1,6 +1,6 @@
 # Otel Rezervasyon Sistemi - Dönem Sonu Projesi
 
-Windows Forms tabanlı otel rezervasyon yönetim sistemi. C# ve SQL Server kullanılarak geliştirilmiştir.
+Windows Forms tabanlı otel rezervasyon yönetim sistemi. C# ve MySQL Server kullanılarak geliştirilmiştir.
 
 ## Özellikler
 
