@@ -2,6 +2,11 @@
 
 Windows Forms tabanlı otel rezervasyon yönetim sistemi. C# ve MySQL Server kullanılarak geliştirilmiştir.
 
+*Proje Tanıtım Videosu*:
+
+[![Proje Demo](https://img.youtube.com/vi/X22Sbf-z2EI/maxresdefault.jpg)](https://www.youtube.com/watch?v=X22Sbf-z2EI)
+
+
 ## Özellikler
 
 - Oda arama ve rezervasyon
