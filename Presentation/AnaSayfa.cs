@@ -13,8 +13,8 @@ namespace OtelRezervasyon.Presentation
         private Label lblAddress;
         private Label lblContact;
         private Button btnYonetici;
-        private PictureBox pictureBox;
         private Panel panelInfo;
+        private PictureBox pictureBox;
         private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
 
         public AnaSayfa()
@@ -24,17 +24,16 @@ namespace OtelRezervasyon.Presentation
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.lblHotelName = new System.Windows.Forms.Label();
             this.lblSlogan = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
             this.btnYonetici = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
             this.panelInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHotelName
@@ -96,19 +95,6 @@ namespace OtelRezervasyon.Presentation
             this.btnYonetici.UseVisualStyleBackColor = false;
             this.btnYonetici.Click += new System.EventHandler(this.btnYonetici_Click);
             // 
-            // pictureBox
-            // 
-            this.pictureBox.BackColor = System.Drawing.Color.White;
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.ErrorImage")));
-            this.pictureBox.Image = global::OtelRezervasyon.Properties.Resources.otelLogo;
-            this.pictureBox.Location = new System.Drawing.Point(30, 30);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(200, 150);
-            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox.TabIndex = 0;
-            this.pictureBox.TabStop = false;
-            // 
             // panelInfo
             // 
             this.panelInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
@@ -127,6 +113,18 @@ namespace OtelRezervasyon.Presentation
             this.mySqlCommand1.EnableCaching = false;
             this.mySqlCommand1.Transaction = null;
             // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.Color.White;
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Image = global::OtelRezervasyon.Properties.Resources.otelLogo;
+            this.pictureBox.Location = new System.Drawing.Point(30, 30);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(200, 150);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
+            // 
             // AnaSayfa
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -141,9 +139,9 @@ namespace OtelRezervasyon.Presentation
             this.Name = "AnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bursa Taş Hotel - Rezervasyon Sistemi";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panelInfo.ResumeLayout(false);
             this.panelInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
