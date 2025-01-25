@@ -1,0 +1,58 @@
+# Veritabanı yapısı 
+database adı :"hoteldb"
+BAGLANTI STRİNGİ !! ASLA DEGISME
+Server=localhost;Database=hoteldb;Uid=root;Pwd=;Port=3306
+
+1. **Oda (Ana Tablo)**
+- odaId (PK, auto)
+- odaNumarasi
+- temelFiyat
+- durum (default: BOŞ)
+2. **OzelOda (Oda'nın child tablosu)**
+- odaId (PK, Oda'ya bağlı)
+- odaTipi (VARCHAR(50)) 
+- kat (INT)
+- miniBar (BOOLEAN)
+- jakuzi (BOOLEAN)
+- sehirManzara (BOOLEAN)
+- genisBalkon (BOOLEAN)
+- aciklama (TEXT)
+
+3. **Musteri**
+- musteriId (PK, auto)
+- tcKimlik
+- ad, soyad
+- email, telefon, adres (opsiyonel)
+
+4. **Rezervasyon (İlişki Tablosu)**
+- rezervasyonId (PK, auto)
+- odaId (FK -> Oda)
+- musteriId (FK -> Musteri)
+- girisTarihi, cikisTarihi
+- fiyat
+- durum (default: AKTİF)
+
+5. **Fatura**
+- faturaId (PK, auto)
+- rezervasyonId (FK -> Rezervasyon)
+- toplamFiyat
+- odemeTarihi
+- odemeDurumu (default: BEKLEMEDE)
+
+6. **Yonetici**
+- yoneticiId (PK, auto)
+- kullaniciAdi
+- sifre
+- rol (default: PERSONEL)
+
+7. **Otel (Genel Bilgiler)**
+- otelId (PK, auto)
+- otelAdi
+- odaSayisi
+- adres, telefon1, telefon2
+
+İLİŞKİLER:
+- Oda -> OzelOda (1:1)
+- Oda -> Rezervasyon (1:N)
+- Musteri -> Rezervasyon (1:N)
+- Rezervasyon -> Fatura (1:1)
